@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'aboutme.apps.AboutmeConfig',
+    'authentication.apps.AuthenticationConfig',
     'rest_framework',
+    'mycalendar.apps.MycalendarConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
