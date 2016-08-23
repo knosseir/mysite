@@ -1,10 +1,7 @@
 from django.db import models
+import datetime
 
-# Create your models here.
-
-# Actions with a due date.
-
-# Pretty much a reminder, except I do not want to repeat code
+# Pretty much a reminder, except I do not want inheritance
 class SchedulableItem(models.Model):
 	title = models.CharField(max_length=50)
 	description = models.CharField(max_length=150, blank=True) # Not required
