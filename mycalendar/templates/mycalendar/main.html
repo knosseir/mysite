@@ -1,0 +1,32 @@
+{% load calendar_test %}
+{% load staticfiles %}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/calendar.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-sm-12"><center><h1>{% getMonth %}</h1></center></div>
+	</div>
+	<hr />
+	<div class="row seven-cols">
+		<div class="col-sm-1"><center><small>Sunday</small></center></div>
+		<div class="col-sm-1"><center><small>Monday</small></center></div>
+		<div class="col-sm-1"><center><small>Tuesday</small></center></div>
+		<div class="col-sm-1"><center><small>Wednesday</small></center></div>
+		<div class="col-sm-1"><center><small>Thursday</small></center></div>
+		<div class="col-sm-1"><center><small>Friday</small></center></div>
+		<div class="col-sm-1"><center><small>Saturday</small></center></div>
+	</div>
+
+	<div class="row">
+	<!-- i tried to do a shitton of things so i have no idea what i'm doing anymore but feel free to scrap this for something better this is just a placeholder while i try to figure out how django works lmao -->
+	</div>
+
+
+</div>
