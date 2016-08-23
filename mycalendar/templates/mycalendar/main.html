@@ -3,10 +3,10 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="{% static 'css/calendar.css' %}">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <div class="container">
 
@@ -31,7 +31,8 @@
 		<div class="panel panel-default">
 		{% for y in "1234567" %}
 			<!-- you would probably put an if statement here for checking if there is an event on said day -->
-			<div class="col-sm-1 panel-body calendar_box calendar_border"></div>
+			<div class="col-sm-1 panel-body calendar_box calendar_border">
+			</div>
 		{% endfor %}
 		</div>
 		</div>
