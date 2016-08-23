@@ -15,18 +15,27 @@
 	</div>
 	<hr />
 	<div class="row seven-cols">
-		<div class="col-sm-1"><center><small>Sunday</small></center></div>
-		<div class="col-sm-1"><center><small>Monday</small></center></div>
-		<div class="col-sm-1"><center><small>Tuesday</small></center></div>
-		<div class="col-sm-1"><center><small>Wednesday</small></center></div>
-		<div class="col-sm-1"><center><small>Thursday</small></center></div>
-		<div class="col-sm-1"><center><small>Friday</small></center></div>
-		<div class="col-sm-1"><center><small>Saturday</small></center></div>
+		<div class="panel panel-default">
+		<div class="col-sm-1 panel-heading"><center><h4>Sunday</h4></center></div>
+		<div class="col-sm-1 panel-heading"><center><h4>Monday</h4></center></div>
+		<div class="col-sm-1 panel-heading"><center><h4>Tuesday</h4></center></div>
+		<div class="col-sm-1 panel-heading"><center><h4>Wednesday</h4></center></div>
+		<div class="col-sm-1 panel-heading"><center><h4>Thursday</h4></center></div>
+		<div class="col-sm-1 panel-heading"><center><h4>Friday</h4></center></div>
+		<div class="col-sm-1 panel-heading"><center><h4>Saturday</h4></center></div>
+		</div>
 	</div>
 
-	<div class="row">
+	{% for x in "12345" %}
+		<div class="row seven-cols">
+		<div class="panel panel-default">
+		{% for y in "1234567" %}
+			<!-- you would probably put an if statement here for checking if there is an event on said day -->
+			<div class="col-sm-1 panel-body calendar_box calendar_border"></div>
+		{% endfor %}
+		</div>
+		</div>
+	{% endfor %}
+
 	<!-- i tried to do a shitton of things so i have no idea what i'm doing anymore but feel free to scrap this for something better this is just a placeholder while i try to figure out how django works lmao -->
-	</div>
-
-
 </div>
