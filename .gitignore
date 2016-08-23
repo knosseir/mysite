@@ -88,3 +88,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+*.pyc
+db.sqlite3
+local_settings.py
