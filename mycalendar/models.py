@@ -3,11 +3,11 @@ from django.db import models
 # Create your models here.
 
 # Actions with a due date.
-class Reminder(models.Model):
+
+# Pretty much a reminder, except I do not want to repeat code
+class SchedulableItem(models.Model):
 	title = models.CharField(max_length=50)
 	description = models.CharField(max_length=150, blank=True) # Not required
-
-	deadline = models.DateTimeField()
 
 	# Location of event in longitude and lattitude
 	lon = models.FloatField(blank=True) # Not required
@@ -15,24 +15,32 @@ class Reminder(models.Model):
 
 	priority = models.IntegerField()
 
+	scheduled = False
+
 	def __str__(self):
 		return self.title
 
+class Reminder(SchedulableItem):
+	deadline = models.DateTimeField()
+
 # Tasks are longer and should have an ETC. 
-class Task(Reminder):
+class Task(SchedulableItem):
 	# Estimated time to completion in seconds (a time interval object)
+	deadline = models.DateTimeField()
 	etc = models.DurationField()
 
 # Events are scheduled on a calendar and can be rescheduled.
-class Event(Reminder):
+class Event(SchedulableItem):
 	start = models.DateTimeField()
 	end = models.DateTimeField()
 
 	calendar = models.ForeignKey('Calendar', on_delete=models.CASCADE)
 
-# Calendars hold lists of event objects. Reminders and tasks are scheduled onto calendars. EVENTS CAN BE RESCHEDULED HENCE THE DUE DATE.
+	scheduled = True
+
+# Calendars hold lists of event objects. Reminders and tasks are scheduled onto calendars.
 class Calendar(models.Model):
-	calender_name = models.CharField(max_length=50)
+	calendar_name = models.CharField(max_length=50)
 	source_name = models.CharField(max_length=50)
 	user_email = models.EmailField()
 
