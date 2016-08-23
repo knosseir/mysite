@@ -7,32 +7,19 @@ register = template.Library()
 def getMonth():
     d = datetime.date.today()
 
-    if d.month == 1:
-        return 'January'
-    elif d.month == 2:
-        return 'February'
-    elif d.month == 3:
-        return 'March'
-    elif d.month == 4:
-        return 'April'
-    elif d.month == 5:
-        return 'May'
-    elif d.month == 6:
-        return 'June'
-    elif d.month == 7:
-        return 'July'
-    elif d.month == 8:
-        return 'August'
-    elif d.month == 9:
-        return 'September'
-    elif d.month == 10:
-        return 'October'
-    elif d.month == 11:
-        return 'November'
-    elif d.month == 12:
-        return 'December'
-    else:
-        return "ERROR!"
+    return {1:'January',
+            2: 'February',
+            3: 'March',
+            4: 'April',
+            5: 'May',
+            6: 'June',
+            7: 'July',
+            8: 'August',
+            9: 'September',
+            10: 'October',
+            11: 'November',
+            12: 'December',
+    }[d.month]
 
 @register.simple_tag
 def getMonthStartDOW():
