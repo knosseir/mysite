@@ -13,6 +13,7 @@ from . import views
 
 urlpatterns = [
 	url(r'^$', views.main, name="main"),
+	url(r'^week$', views.week, name="week"),
 ]
 
 urlpatterns += router.urls
