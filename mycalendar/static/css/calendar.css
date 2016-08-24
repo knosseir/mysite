@@ -1,0 +1,39 @@
+@media (min-width: 768px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1  {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+  }
+}
+
+.calendar_border {
+outline: 1px solid black;
+}
+
+.calendar_weekborder {
+outline: 1px solid gray;
+}
+
+.calendar_box {
+min-height: 100px;
+}
+
+.calendar_weekbox {
+min-height: 10px;
+}

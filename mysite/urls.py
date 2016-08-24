@@ -18,4 +18,5 @@ from django.conf.urls import url, include
 
 urlpatterns = [
     url(r'', include('aboutme.urls')),
+    url(r'calendar/', include('mycalendar.urls')),
 ]
