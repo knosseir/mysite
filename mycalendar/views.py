@@ -9,7 +9,6 @@ from rest_framework.response import Response
 # Create your views here.
 def main(request):
 	return render(request, 'mycalendar/main.html')
-
 def list(request):
 	return render(request, 'mycalendar/list.html')
 
