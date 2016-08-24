@@ -10,6 +10,12 @@ from rest_framework.response import Response
 def main(request):
 	return render(request, 'mycalendar/main.html')
 
+def list(request):
+	return render(request, 'mycalendar/list.html')
+
+def week(request):
+	return render(request, 'mycalendar/week.html')
+
 class ReminderViewSet(viewsets.ModelViewSet):
 	queryset = Reminder.objects.all()
 	serializer_class = ReminderSerializer
