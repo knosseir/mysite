@@ -23,30 +23,39 @@
     <![endif]-->
   </head>
   
-<body>
-	<div class="container">
-      <!-- Static navbar -->
-      <nav class="navbar-light">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Luke Zhu</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="{% url 'home' %}">Home</a></li>
-              <li><a href="{% url 'resume' %}">Resume</a></li> <!--ADD LINK -->
-              <li><a href="{% url 'projects' %}">Projects</a></li> <!--ADD LINK -->
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-      </nav>
-    </div> <!-- /container -->
-	<img src="{% static 'Cannabis_icon.png' %}">
-</body>
+  <body>
+    <div class="container">
+        <!-- Static navbar -->
+        <nav class="navbar-light">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Luke Zhu</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'resume' %}">Resume</a></li> <!--ADD LINK -->
+                <li><a href="{% url 'projects' %}">Projects</a></li> <!--ADD LINK -->
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!--/.container-fluid -->
+        </nav>
+      </div> <!-- /container -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg"/>
+    
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
 </html>
+
