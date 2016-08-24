@@ -1,0 +1,40 @@
+{% load calendar_test %}
+{% load staticfiles %}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/calendar.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-sm-12 text-center"><h1>{% getWeekdayInterval %}</h1></div>
+	</div>
+	<hr />
+	<div class="row">
+		<div class="col-sm-1 calendar_weekbox text-center col-sm-offset-2"><h4>Time</h4></div>
+		<div class="col-sm-1 calendar_weekbox text-center"><h4>Sunday</h4></div>
+		<div class="col-sm-1 calendar_weekbox text-center"><h4>Monday</h4></div>
+		<div class="col-sm-1 calendar_weekbox text-center"><h4>Tuesday</h4></div>
+		<div class="col-sm-1 calendar_weekbox text-center"><h4>Wednesday</h4></div>
+		<div class="col-sm-1 calendar_weekbox text-center"><h4>Thursday</h4></div>
+		<div class="col-sm-1 calendar_weekbox text-center"><h4>Friday</h4></div>
+		<div class="col-sm-1 calendar_weekbox text-center"><h4>Saturday</h4></div>
+	</div>
+
+	{% for x in "abcdefghijklmnopqrstuvwx" %}
+		<div class="row">
+			<div class="col-sm-2"></div>
+			{% for y in "12345678" %}
+			<div class="col-sm-1 panel-body calendar_weekbox calendar_weekborder"></div>
+			{% endfor %}
+			<div class="col-sm-1"></div>
+			<div class="col-sm-1"></div>
+		</div>
+	{% endfor %}
+
+	<!-- i tried to do a shitton of things so i have no idea what i'm doing anymore but feel free to scrap this for something better this is just a placeholder while i try to figure out how django works lmao -->
+</div>

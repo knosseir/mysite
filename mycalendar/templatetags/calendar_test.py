@@ -1,5 +1,7 @@
 from django import template
 import datetime
+from datetime import timedelta
+
 
 register = template.Library()
 
@@ -27,8 +29,18 @@ def getMonthStartDOW():
     dow = datetime.date(d.year, d.month, 1) #1st day of the month
     return dow.weekday()
 
+def getWeekSunday():
+    d = datetime.date.today()
+    sunday = d - timedelta(days=d.isoweekday())
+    return sunday
 
-@register.filter
-def get_range(value):
-    return range(value)
+def getWeekSaturday():
+    d = datetime.date.today()
+    sunday = d - timedelta(days=d.isoweekday())
+    saturday = sunday + timedelta(days=6)
+    return saturday
 
+@register.simple_tag
+def getWeekdayInterval():
+    weekdays = getMonth() + " " + str(getWeekSunday().day) + " - " + str(getWeekSaturday().day) + ", " + str(datetime.date.today().year)
+    return weekdays

@@ -26,6 +26,14 @@
 outline: 1px solid black;
 }
 
+.calendar_weekborder {
+outline: 1px solid grey;
+}
+
 .calendar_box {
 min-height: 100px;
+}
+
+.calendar_weekbox {
+min-height: 10px;
 }
